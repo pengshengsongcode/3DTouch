@@ -13,34 +13,87 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    //判断是否为3Dtouch进入App
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        switch shortcutItem.type {
+        case "one":
+            print("使用3D Touch 点击了第一个选项")
+        case "two":
+            print("使用3D Touch 点击了第二个选项")
+        default:
+            print("扯犊子~")
+        }
+        
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //设置3Dtouch标签项
+        
+        setupShortcut()
+        
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    func setupShortcut() {
+        
+        /*
+         typedef NS_ENUM(NSInteger, UIApplicationShortcutIconType) {
+         
+         UIApplicationShortcutIconTypeCompose,//编辑的图标
+         UIApplicationShortcutIconTypePlay,//播放图标
+         UIApplicationShortcutIconTypePause,//暂停图标
+         UIApplicationShortcutIconTypeAdd,//添加图标
+         UIApplicationShortcutIconTypeLocation,//定位图标
+         UIApplicationShortcutIconTypeSearch,//搜索图标
+         UIApplicationShortcutIconTypeShare//分享图标
+         UIApplicationShortcutIconTypeProhibit       NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeContact        NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeHome           NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeMarkLocation   NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeFavorite       NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeLove           NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeCloud          NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeInvitation     NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeConfirmation   NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeMail           NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeMessage        NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeDate           NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeTime           NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeCapturePhoto   NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeCaptureVideo   NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeTask           NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeTaskCompleted  NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeAlarm          NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeBookmark       NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeShuffle        NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeAudio          NS_ENUM_AVAILABLE_IOS(9_1),
+         UIApplicationShortcutIconTypeUpdate         NS_ENUM_AVAILABLE_IOS(9_1)
+         } NS_ENUM_AVAILABLE_IOS(9_0) __TVOS_PROHIBITED;
+         */
+        
+        /*
+         - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+         
+         也需要进行一下判断，在launchOptions中有UIApplicationLaunchOptionsShortcutItemKey这样一个键，通过它，我们可以区别是否是从标签进入的app，如果是则处理结束逻辑后，返回NO，防止处理逻辑被反复回调。
+         
+         几点注意：
+         
+         1、快捷标签最多可以创建四个，包括静态的和动态的。
+         
+         2、每个标签的题目和icon最多两行，多出的会用...省略
+         
+         */
+        
+        let icon = UIApplicationShortcutIcon(type: UIApplicationShortcutIconType.play)
+        
+        let item = UIApplicationShortcutItem(type: "two", localizedTitle: "叫爸爸2", localizedSubtitle: "点我吧~", icon: icon, userInfo: nil)
+        
+        UIApplication.shared.shortcutItems = [item]
+
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
 }
 
