@@ -10,9 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     //判断是否为3Dtouch进入App
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("使用3D Touch 点击了第一个选项")
         case "two":
             print("使用3D Touch 点击了第二个选项")
+        case "three":
+            print("使用3D Touch 点击了第三个选项")
+        case "four":
+            print("使用3D Touch 点击了第四个选项")
         default:
             print("扯犊子~")
         }
@@ -37,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
+    
     func setupShortcut() {
         
         /*
@@ -90,10 +94,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let icon = UIApplicationShortcutIcon(type: UIApplicationShortcutIconType.play)
         
-        let item = UIApplicationShortcutItem(type: "two", localizedTitle: "叫爸爸2", localizedSubtitle: "点我吧~", icon: icon, userInfo: nil)
+        let item = UIApplicationShortcutItem(type: "one", localizedTitle: "叫爸爸2", localizedSubtitle: "点我吧~", icon: icon, userInfo: nil)
         
         UIApplication.shared.shortcutItems = [item]
-
+        
     }
 }
 

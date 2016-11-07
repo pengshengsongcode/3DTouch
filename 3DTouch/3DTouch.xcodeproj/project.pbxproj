@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803361071DD0752F002DEBD0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803361061DD0752F002DEBD0 /* NotificationCenter.framework */; };
+		8033610A1DD0752F002DEBD0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803361091DD0752F002DEBD0 /* TodayViewController.swift */; };
+		8033610D1DD0752F002DEBD0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8033610B1DD0752F002DEBD0 /* MainInterface.storyboard */; };
+		803361111DD0752F002DEBD0 /* 3DTouchToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 803361041DD0752F002DEBD0 /* 3DTouchToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8054F11B1DB4B3C70050CF7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054F11A1DB4B3C70050CF7C /* AppDelegate.swift */; };
 		8054F11D1DB4B3C70050CF7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054F11C1DB4B3C70050CF7C /* ViewController.swift */; };
 		8054F1201DB4B3C70050CF7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8054F11E1DB4B3C70050CF7C /* Main.storyboard */; };
@@ -14,7 +18,36 @@
 		8054F1251DB4B3C70050CF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8054F1231DB4B3C70050CF7C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8033610F1DD0752F002DEBD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8054F10F1DB4B3C70050CF7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 803361031DD0752F002DEBD0;
+			remoteInfo = 3DTouchToday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		803361151DD0752F002DEBD0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				803361111DD0752F002DEBD0 /* 3DTouchToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		803361041DD0752F002DEBD0 /* 3DTouchToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = 3DTouchToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		803361061DD0752F002DEBD0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		803361091DD0752F002DEBD0 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		8033610C1DD0752F002DEBD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8033610E1DD0752F002DEBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8054F1171DB4B3C70050CF7C /* 3DTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8054F11A1DB4B3C70050CF7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8054F11C1DB4B3C70050CF7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +58,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		803361011DD0752F002DEBD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				803361071DD0752F002DEBD0 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8054F1141DB4B3C70050CF7C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +76,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		803361051DD0752F002DEBD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				803361061DD0752F002DEBD0 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		803361081DD0752F002DEBD0 /* 3DTouchToday */ = {
+			isa = PBXGroup;
+			children = (
+				803361091DD0752F002DEBD0 /* TodayViewController.swift */,
+				8033610B1DD0752F002DEBD0 /* MainInterface.storyboard */,
+				8033610E1DD0752F002DEBD0 /* Info.plist */,
+			);
+			path = 3DTouchToday;
+			sourceTree = "<group>";
+		};
 		8054F10E1DB4B3C70050CF7C = {
 			isa = PBXGroup;
 			children = (
 				8054F1191DB4B3C70050CF7C /* 3DTouch */,
+				803361081DD0752F002DEBD0 /* 3DTouchToday */,
+				803361051DD0752F002DEBD0 /* Frameworks */,
 				8054F1181DB4B3C70050CF7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				8054F1171DB4B3C70050CF7C /* 3DTouch.app */,
+				803361041DD0752F002DEBD0 /* 3DTouchToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +129,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		803361031DD0752F002DEBD0 /* 3DTouchToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 803361141DD0752F002DEBD0 /* Build configuration list for PBXNativeTarget "3DTouchToday" */;
+			buildPhases = (
+				803361001DD0752F002DEBD0 /* Sources */,
+				803361011DD0752F002DEBD0 /* Frameworks */,
+				803361021DD0752F002DEBD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3DTouchToday;
+			productName = 3DTouchToday;
+			productReference = 803361041DD0752F002DEBD0 /* 3DTouchToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8054F1161DB4B3C70050CF7C /* 3DTouch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8054F1291DB4B3C70050CF7C /* Build configuration list for PBXNativeTarget "3DTouch" */;
@@ -74,10 +153,12 @@
 				8054F1131DB4B3C70050CF7C /* Sources */,
 				8054F1141DB4B3C70050CF7C /* Frameworks */,
 				8054F1151DB4B3C70050CF7C /* Resources */,
+				803361151DD0752F002DEBD0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				803361101DD0752F002DEBD0 /* PBXTargetDependency */,
 			);
 			name = 3DTouch;
 			productName = 3DTouch;
@@ -94,6 +175,11 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = huangbaoche;
 				TargetAttributes = {
+					803361031DD0752F002DEBD0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XGRFCXS336;
+						ProvisioningStyle = Automatic;
+					};
 					8054F1161DB4B3C70050CF7C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XGRFCXS336;
@@ -115,11 +201,20 @@
 			projectRoot = "";
 			targets = (
 				8054F1161DB4B3C70050CF7C /* 3DTouch */,
+				803361031DD0752F002DEBD0 /* 3DTouchToday */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		803361021DD0752F002DEBD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8033610D1DD0752F002DEBD0 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8054F1151DB4B3C70050CF7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +228,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		803361001DD0752F002DEBD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8033610A1DD0752F002DEBD0 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8054F1131DB4B3C70050CF7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,7 +247,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		803361101DD0752F002DEBD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 803361031DD0752F002DEBD0 /* 3DTouchToday */;
+			targetProxy = 8033610F1DD0752F002DEBD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		8033610B1DD0752F002DEBD0 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8033610C1DD0752F002DEBD0 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		8054F11E1DB4B3C70050CF7C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -164,6 +283,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		803361121DD0752F002DEBD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XGRFCXS336;
+				INFOPLIST_FILE = 3DTouchToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HBC.-DTouch.-DTouchToday";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		803361131DD0752F002DEBD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XGRFCXS336;
+				INFOPLIST_FILE = 3DTouchToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HBC.-DTouch.-DTouchToday";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		8054F1271DB4B3C70050CF7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -260,6 +405,7 @@
 		8054F12A1DB4B3C70050CF7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = XGRFCXS336;
@@ -274,6 +420,7 @@
 		8054F12B1DB4B3C70050CF7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = XGRFCXS336;
@@ -288,6 +435,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		803361141DD0752F002DEBD0 /* Build configuration list for PBXNativeTarget "3DTouchToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				803361121DD0752F002DEBD0 /* Debug */,
+				803361131DD0752F002DEBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8054F1121DB4B3C70050CF7C /* Build configuration list for PBXProject "3DTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
