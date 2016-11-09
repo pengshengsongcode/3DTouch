@@ -16,6 +16,7 @@
 		8054F1201DB4B3C70050CF7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8054F11E1DB4B3C70050CF7C /* Main.storyboard */; };
 		8054F1221DB4B3C70050CF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8054F1211DB4B3C70050CF7C /* Assets.xcassets */; };
 		8054F1251DB4B3C70050CF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8054F1231DB4B3C70050CF7C /* LaunchScreen.storyboard */; };
+		80FB24D71DD2F67700436BC3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FB24D61DD2F67700436BC3 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8054F1211DB4B3C70050CF7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8054F1241DB4B3C70050CF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8054F1261DB4B3C70050CF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80FB24D61DD2F67700436BC3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				8054F11A1DB4B3C70050CF7C /* AppDelegate.swift */,
 				8054F11C1DB4B3C70050CF7C /* ViewController.swift */,
+				80FB24D61DD2F67700436BC3 /* SecondViewController.swift */,
 				8054F11E1DB4B3C70050CF7C /* Main.storyboard */,
 				8054F1211DB4B3C70050CF7C /* Assets.xcassets */,
 				8054F1231DB4B3C70050CF7C /* LaunchScreen.storyboard */,
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FB24D71DD2F67700436BC3 /* SecondViewController.swift in Sources */,
 				8054F11D1DB4B3C70050CF7C /* ViewController.swift in Sources */,
 				8054F11B1DB4B3C70050CF7C /* AppDelegate.swift in Sources */,
 			);
@@ -442,6 +446,7 @@
 				803361131DD0752F002DEBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8054F1121DB4B3C70050CF7C /* Build configuration list for PBXProject "3DTouch" */ = {
 			isa = XCConfigurationList;

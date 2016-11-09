@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         switch shortcutItem.type {
         case "one":
             print("使用3D Touch 点击了第一个选项")
+            
+            let nav = window?.rootViewController as? UINavigationController
+            
+            let vc = SecondViewController()
+            
+            nav?.pushViewController(vc, animated: true)
+            
         case "two":
             print("使用3D Touch 点击了第二个选项")
         case "three":
@@ -34,6 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let nav = UINavigationController(rootViewController: ViewController())
+        
+        window?.rootViewController = nav
         
         //设置3Dtouch标签项
         
@@ -94,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let icon = UIApplicationShortcutIcon(type: UIApplicationShortcutIconType.play)
         
-        let item = UIApplicationShortcutItem(type: "one", localizedTitle: "叫爸爸2", localizedSubtitle: "点我吧~", icon: icon, userInfo: nil)
+        let item = UIApplicationShortcutItem(type: "four", localizedTitle: "叫爸爸2", localizedSubtitle: "点我吧~", icon: icon, userInfo: nil)
         
         UIApplication.shared.shortcutItems = [item]
         

@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        title = "ViewController"
+        
+        view.backgroundColor = UIColor.red
+        
     }
     
 }
