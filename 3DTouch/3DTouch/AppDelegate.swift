@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let nav = window?.rootViewController as? UINavigationController
             
+            if  nav!.viewControllers.count > 1 {
+                nav!.popToRootViewController(animated: false)
+            }
+            
             let vc = SecondViewController()
             
             nav?.pushViewController(vc, animated: true)
