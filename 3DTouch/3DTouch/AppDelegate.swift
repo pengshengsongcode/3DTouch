@@ -17,26 +17,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
+        //解决循环push问题
+        let nav = window?.rootViewController as? UINavigationController
+        
+        if  nav!.viewControllers.count > 1 {
+            nav!.popToRootViewController(animated: false)
+        }
+        
         switch shortcutItem.type {
         case "one":
             print("使用3D Touch 点击了第一个选项")
-            
-            let nav = window?.rootViewController as? UINavigationController
-            
-            if  nav!.viewControllers.count > 1 {
-                nav!.popToRootViewController(animated: false)
-            }
-            
-            let vc = SecondViewController()
-            
-            nav?.pushViewController(vc, animated: true)
+            nav?.pushViewController(OnceViewController(), animated: true)
             
         case "two":
             print("使用3D Touch 点击了第二个选项")
+            nav?.pushViewController(SecondViewController(), animated: true)
+            
         case "three":
             print("使用3D Touch 点击了第三个选项")
+            nav?.pushViewController(ThirdViewController(), animated: true)
+            
         case "four":
             print("使用3D Touch 点击了第四个选项")
+            nav?.pushViewController(FourthViewController(), animated: true)
+            
         default:
             print("扯犊子~")
         }

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  OnceViewController.swift
 //  3DTouch
 //
 //  Created by 彭盛凇 on 2016/11/9.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class OnceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "SecondViewController"
+        title = "OnceViewController"
         
-        view.backgroundColor = UIColor.orange
-
+        view.backgroundColor = UIColor.cyan
+        
         // Do any additional setup after loading the view.
     }
 

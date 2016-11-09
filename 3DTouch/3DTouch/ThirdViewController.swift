@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ThreeViewController.swift
 //  3DTouch
 //
 //  Created by 彭盛凇 on 2016/11/9.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "SecondViewController"
         
-        view.backgroundColor = UIColor.orange
+        title = "ThirdViewController"
+        
+        view.backgroundColor = UIColor.brown
 
         // Do any additional setup after loading the view.
     }
